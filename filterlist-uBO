@@ -67,10 +67,6 @@ m.youtube.com###player-control-overlay > div.player-controls-content > div.playe
 
 m.youtube.com##ytm-comment-simplebox-renderer.section
 
-!--- Youtube Pure Experience -----------------
-! https://raw.githubusercontent.com/DandelionSprout/adfilt/master/YouTubeYetEvenMorePureVideoExperience.txt
-!
-! https://github.com/DandelionSprout/adfilt/blob/master/YouTubeEvenMorePureVideoExperience.txt
 !--------------------
 
 ||ytimg.com/yts/swfbin/player-*/endscreen.swf$object-subrequest,domain=youtube.com
@@ -100,8 +96,6 @@ youtube.com##.watch-sidebar-head
 m.youtube.com##.ytm-autonav-bar
 
 ##.ytp-pause-overlay
-
-!--------------------
 
 !-	Reddit Filter --------------------------------------------------
 
