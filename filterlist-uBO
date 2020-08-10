@@ -3,7 +3,7 @@
 ! No Warranties or Guarantees, use at your own risk
 ! This filter list is not guaranteed to be frequently updated
 
-!--	Updated August 9, 2020 ----------------
+!--	Updated August 10, 2020 ----------------
 
 !-	Youtube Filter --------------------------------------------------
 
@@ -97,6 +97,8 @@ m.youtube.com##.ytm-autonav-bar
 
 ##.ytp-pause-overlay
 
+youtube.com###dismissable:has-text(Free with Ads)
+
 !-	Reddit Filter --------------------------------------------------
 
 reddit.com##.TopNav-promoButton
@@ -135,6 +137,20 @@ old.reddit.com##.premium-banner
 
 old.reddit.com##.listingsignupbar.infobar
 
+www.reddit.com###subscribe-button-t3_i6a6i6
+
+www.reddit.com##._2n96dzZYei5koZIof4hNGb._38miRaQjZDUy2B55AHWYlg
+
+www.reddit.com##._3VqiDbufgl9_EiV_tk9L6u
+
+www.reddit.com##.A8CAQWacAEq_Pwee5F5IZ > video
+
+www.reddit.com##.A8CAQWacAEq_Pwee5F5IZ
+
+www.reddit.com##._25K6Ujp7eqOAHEdYuHm3pY
+
+www.reddit.com##.scrollerItem.hrQ5rXDbyl6t3TIXxENXB._3Qkp11fjcAw9I9wtLo8frE._1EG7_Cm18ANvUvJ4rJdRgQ
+
 !-	Google Filter ----------------------------------------------
 
 drive.google.com##.Yb-Il-d-rc.Kk7lMc-QWPxkf-d.Yb-Il-d
@@ -162,6 +178,20 @@ mail.google.com##.YX.aZ6.akc
 mail.google.com##.aeQ
 
 sites.google.com##.HB15Rb
+
+!-	DuckDuckGo Filter ----------------------------------------------
+
+duckduckgo.com##.js-feedback-btn-wrap
+
+duckduckgo.com##.badge-link--newsletter.badge-link--thumbnail.js-badge-link.badge-link--serp.badge-link
+
+duckduckgo.com##.header__label.showcase.header--aside__item > .js-hl-button.header__clickable
+
+duckduckgo.com##.social.header__label.header--aside__social.header--aside__item > .js-hl-button.header__clickable
+
+duckduckgo.com##.footer_cards
+
+duckduckgo.com##.footer__column
 
 !-	Quizlet Filter -------------------------------------------------
 
@@ -466,9 +496,5 @@ www.answers.com##.adhesion_dom.html.module
 www.answers.com###right
 
 connvoters.com##body > center > table > tbody > tr > td:nth-of-type(1)
-
-duckduckgo.com##.js-feedback-btn-wrap
-
-duckduckgo.com##.badge-link--newsletter.badge-link--thumbnail.js-badge-link.badge-link--serp.badge-link
 
 !-----------------------------------------------------------------------------------------------------
