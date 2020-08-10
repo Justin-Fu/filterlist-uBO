@@ -3,7 +3,7 @@
 ! No Warranties or Guarantees, use at your own risk
 ! This filter list is not guaranteed to be frequently updated
 
-!--	Updated August 9, 2020 ----------------
+!--	Updated August 10, 2020 ----------------
 
 !-	Youtube Filter --------------------------------------------------
 
@@ -94,5 +94,7 @@ youtube.com##.watch-sidebar-head
 m.youtube.com##.ytm-autonav-bar
 
 ##.ytp-pause-overlay
+
+youtube.com###dismissable:has-text(Free with Ads)
 
 !-----------------------------------------------------------------------------------------------------
