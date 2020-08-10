@@ -121,17 +121,17 @@ reddit.com##div[id*="sidebar"][data-before-content="promoted"]:upward(3)
 
 reddit.com##div[class][data-before-content="promoted"]:not([id])
 
-www.reddit.com##.m-redesign.m-compact.LegacyAnnouncement
+reddit.com##.m-redesign.m-compact.LegacyAnnouncement
 
-www.reddit.com##.m-animated.XPromoPopup__content
+reddit.com##.m-animated.XPromoPopup__content
 
-www.reddit.com##.m-animated.XPromoPopup__overlay
+reddit.com##.m-animated.XPromoPopup__overlay
 
-www.reddit.com##.NavFrame > .m-slideIn.XPromoPill
+reddit.com##.NavFrame > .m-slideIn.XPromoPill
 
-www.reddit.com##.XPromoInFeed
+reddit.com##.XPromoInFeed
 
-www.reddit.com##.NavFrame > .XPromoPill
+reddit.com##.NavFrame > .XPromoPill
 
 old.reddit.com##.premium-banner
 
