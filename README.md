@@ -1,4 +1,4 @@
-Go to this filterlist instead:
+Go to my other filterlist instead:
 
 https://github.com/jfu299/filterlist-uBO/blob/master/README.md
 
