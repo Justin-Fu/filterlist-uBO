@@ -3,7 +3,7 @@
 ! No Warranties or Guarantees, use at your own risk
 ! This filter list is not guaranteed to be frequently updated
 
-!--	Updated August 10, 2020 ----------------
+!--	Updated August 13, 2020 ----------------
 
 !-	Youtube Filter --------------------------------------------------
 
@@ -99,6 +99,16 @@ m.youtube.com##.ytm-autonav-bar
 
 youtube.com###dismissable:has-text(Free with Ads)
 
+youtube.com##ytd-primetime-promo-renderer
+
+youtube.com##ytd-rich-section-renderer:has-text(Recommended movies)
+
+youtube.com##ytd-rich-section-renderer:has-text(Latest YouTube posts)
+
+youtube.com##ytd-rich-section-renderer:has-text(What did you think of this video?)
+
+youtube.com##ytd-rich-section-renderer:has-text(Breaking news)
+
 !-	Reddit Filter --------------------------------------------------
 
 reddit.com##.TopNav-promoButton
@@ -137,15 +147,19 @@ old.reddit.com##.premium-banner
 
 old.reddit.com##.listingsignupbar.infobar
 
-www.reddit.com###subscribe-button-t3_i6a6i6
+reddit.com###redesign-beta-optin-btn
 
-www.reddit.com##._2GTMVdV2t3ka_zfkVHHo95
+old.reddit.com###redesign-beta-optin-btn
 
-www.reddit.com##._3VqiDbufgl9_EiV_tk9L6u
+reddit.com##h2:has-text(/^Updates from reddit$/):upward(1)
 
-www.reddit.com##.A8CAQWacAEq_Pwee5F5IZ
+reddit.com##h3:has-text(/^Top broadcast right now$/):upward(7)
 
-www.reddit.com##._25K6Ujp7eqOAHEdYuHm3pY
+reddit.com###TrendingPostsContainer
+
+reddit.com##button:has-text(/^Try Now$/):upward(4)
+
+reddit.com##h2:has-text(/^Trending Communities$/):upward(6)
 
 !-	Google Filter ----------------------------------------------
 
