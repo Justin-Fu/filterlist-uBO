@@ -486,14 +486,6 @@ pi.hole##.user-footer
 
 pi.hole##li:nth-of-type(14) > [href="https://pi-hole.net/donate/"]
 
-192.168.1.2##li:nth-of-type(4) > [href="https://pi-hole.net/donate/"]
-
-192.168.1.2##.col-sm-6.col-xs-12
-
-192.168.1.2##.user-footer
-
-192.168.1.2##li:nth-of-type(14) > [href="https://pi-hole.net/donate/"]
-
 !-	Miscellaneous Filters --------------------------------------------------
 
 newsela.com##.styles__recommendedContent___22lV6
@@ -521,5 +513,19 @@ www.answers.com###right
 connvoters.com##body > center > table > tbody > tr > td:nth-of-type(1)
 
 ||www.dnsleaktest.com/assets/img/cute-box-image.png$image
+
+!-	Other Filters --------------------------------------------------
+
+192.168.1.2##li:nth-of-type(4) > [href="https://pi-hole.net/donate/"]
+
+192.168.1.2##.col-sm-6.col-xs-12
+
+192.168.1.2##.user-footer
+
+192.168.1.2##li:nth-of-type(14) > [href="https://pi-hole.net/donate/"]
+
+youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(SSSniperWolf))
+
+youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(James Charles))
 
 !-----------------------------------------------------------------------------------------------------
