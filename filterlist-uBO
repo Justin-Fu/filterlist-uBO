@@ -1,10 +1,9 @@
 !-		uBlock Origin Custom Filter List   	-----------------------------------------------
 
+!    https://github.com/Justin-Fu/filterlist-uBO
 !    https://raw.githubusercontent.com/Justin-Fu/filterlist-uBO/master/filterlist-uBO
 
 ! By: Justin Fu
-! USE AT YOUR OWN RISK
-! This filter list is not guaranteed to be frequently updated or maintained
 
 !--	Updated August 22, 2020 ----------------
 
@@ -337,6 +336,10 @@ instagram.com##a[href^="https://itunes.apple.com/app/instagram/id389801252?"][ro
 instagram.com##a[href="/accounts/login/?next=%2F&source=mobile_nav"] + button
 
 instagram.com##.xkuux
+
+instagram.com###react-root > section._9eogI.E3X2T:last-child > main.SCxLW.uzKWK:nth-child(2) > section._1SP8R.M_qbh:first-child > div:last-child > div:first-child > div > div._8Rm4L.bq3Mi.D_6tu.ccgHY.l9Ww0:nth-child(2) > div.Igw0E.IwRSH.eGOV_._4EzTm:last-child > div.EcJQs
+
+instagram.com###react-root > section._9eogI.E3X2T:last-child > main.SCxLW.uzKWK:nth-child(2) > section._1SP8R.M_qbh:first-child > div:last-child > div:first-child > div > div._8Rm4L.bq3Mi.D_6tu.ccgHY.l9Ww0:nth-child(2) > div.Igw0E.IwRSH.eGOV_._4EzTm:last-child
 
 !-	Quizlet Filter -------------------------------------------------
 
@@ -675,9 +678,5 @@ youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-tex
 m.youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(SSSniperWolf))
 
 m.youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(James Charles))
-
-instagram.com###react-root > section._9eogI.E3X2T:last-child > main.SCxLW.uzKWK:nth-child(2) > section._1SP8R.M_qbh:first-child > div:last-child > div:first-child > div > div._8Rm4L.bq3Mi.D_6tu.ccgHY.l9Ww0:nth-child(2) > div.Igw0E.IwRSH.eGOV_._4EzTm:last-child > div.EcJQs
-
-instagram.com###react-root > section._9eogI.E3X2T:last-child > main.SCxLW.uzKWK:nth-child(2) > section._1SP8R.M_qbh:first-child > div:last-child > div:first-child > div > div._8Rm4L.bq3Mi.D_6tu.ccgHY.l9Ww0:nth-child(2) > div.Igw0E.IwRSH.eGOV_._4EzTm:last-child
 
 !-----------------------------------------------------------------------------------------------------
