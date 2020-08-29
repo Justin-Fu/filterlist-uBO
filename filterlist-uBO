@@ -5,7 +5,7 @@
 
 ! By: Justin Fu
 
-! Updated August 26, 2020
+! Updated August 29, 2020
 
 !--------------------
 
@@ -661,7 +661,7 @@ schoology.greenwich.k12.ct.us##.util-directions-top-one-point-two-ctpIT.util-wid
 
 pi.hole##li:nth-of-type(4) > [href="https://pi-hole.net/donate/"]
 
-pi.hole##.col-sm-6.col-xs-12
+pi.hole##div.text-center.row-centered.row:nth-of-type(1)
 
 pi.hole##.user-footer
 
@@ -705,7 +705,7 @@ twitter.com##.r-zg41ew.r-1777fci.r-18u37iz.css-1dbjc4n
 
 192.168.1.2##li:nth-of-type(4) > [href="https://pi-hole.net/donate/"]
 
-192.168.1.2##.col-sm-6.col-xs-12
+192.168.1.2##div.text-center.row-centered.row:nth-of-type(1)
 
 192.168.1.2##.user-footer
 
