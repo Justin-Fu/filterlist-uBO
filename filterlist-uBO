@@ -661,9 +661,9 @@ schoology.greenwich.k12.ct.us##._pendo-launcher-badge-bottom-right_._pendo-launc
 
 schoology.greenwich.k12.ct.us##div.attachments-file:nth-of-type(1) > .attachments-file-name > .kami-link
 
-schoology.greenwich.k12.ct.us###home-feed-container
+!schoology.greenwich.k12.ct.us###home-feed-container
 
-schoology.greenwich.k12.ct.us##.util-directions-top-one-point-two-ctpIT.util-width-one-point-eight-1jZzx.util-height-one-point-eight-XPs3y.util-justify-content-center-1x8at.util-font-size-one-26ZPL.util-directions-right-point-two-3vkbs._3RmDr._1tpub.fioA9.tAI8z.USYsM.les2-._2L4PN._2JX1Q
+!schoology.greenwich.k12.ct.us##.util-directions-top-one-point-two-ctpIT.util-width-one-point-eight-1jZzx.util-height-one-point-eight-XPs3y.util-justify-content-center-1x8at.util-font-size-one-26ZPL.util-directions-right-point-two-3vkbs._3RmDr._1tpub.fioA9.tAI8z.USYsM.les2-._2L4PN._2JX1Q
 
 !-	Pi-hole Admin Console Filter ----------
 
