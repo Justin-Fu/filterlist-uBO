@@ -806,4 +806,8 @@ m.youtube.com###dismissable:has-text(/SSSniperWolf/)
 
 m.youtube.com###dismissable:has-text(/James Charles/)
 
+mail.google.com###\:1 > .nH > .S4.oy8Mbf.nH.BltHke > .vy.S2.UI.Nr > .aZ6.tf.Nu > .ae4 > div > .TB.cf > tbody > .TD > .TC
+
+meet.google.com###ow3 > .T4LgNb > .kFwPee > div > .crqnQb > .pHsCke > .Jrb8ue > .lvE3se > .xGFNFf.e0UWKb > .XrLeg.QU4Gid.kCyAyd.UQuaGc.uArJ5e > .Fxmcue.l4V7wb
+
 !--------------------
