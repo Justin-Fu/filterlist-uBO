@@ -1,16 +1,27 @@
 ! Title: Justin-Fu Filterlist
-!      (Designed to work for uBlock Origin)
+!      (Works best with uBlock Origin)
 
 !    https://github.com/Justin-Fu/filterlist-uBO
 !    https://raw.githubusercontent.com/Justin-Fu/filterlist-uBO/master/filterlist-uBO
 
 ! By: Justin Fu
 
-! Updated January 18, 2021
+! Updated: April 16, 2023
 
 !--------------------
 
+
 !-	Youtube Filter ----------
+
+! Voice Search Button
+youtube.com###voice-search-button
+
+! Account Sign In Button
+youtube.com##.ytd-button-renderer.style-scope.yt-simple-endpoint > .size-small.style-suggestive.ytd-button-renderer.style-scope
+youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
+
+! Autoplay Button
+www.youtube.com##button.ytp-button:nth-of-type(6)
 
 !--- Sign in button
 youtube.com##.size-small.style-suggestive.ytd-masthead.style-scope > .ytd-button-renderer.style-scope.yt-simple-endpoint
@@ -21,7 +32,7 @@ youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
 youtube.com##ytd-menu-navigation-item-renderer.ytd-menu-popup-renderer.style-scope:nth-of-type(2) > .ytd-menu-navigation-item-renderer.style-scope.yt-simple-endpoint > .ytd-menu-navigation-item-renderer.style-scope
 
 !--- Comments Title
-youtube.com###title
+!youtube.com###title
 
 !--- Comments like and dislike
 youtube.com###reply-button-end
@@ -37,8 +48,11 @@ youtube.com###creator-heart-button
 !--- Create Comment
 youtube.com###simple-box > .ytd-comments-header-renderer.style-scope
 
-!--- Create Video
-youtube.com##ytd-topbar-menu-button-renderer.style-default.ytd-masthead.style-scope:nth-of-type(1)
+! Youtube Comments Dropdown remove profile pictures
+youtube.com##.ytd-comment-replies-renderer.style-scope.more-button > .ytd-comment-replies-renderer.style-scope.dot
+youtube.com##.ytd-comment-replies-renderer.style-scope.more-button > .ytd-comment-replies-renderer.style-scope.creator-thumbnail
+youtube.com##.ytd-comment-replies-renderer.style-scope.less-button > .ytd-comment-replies-renderer.style-scope.creator-thumbnail
+youtube.com##.ytd-comment-replies-renderer.style-scope.less-button > .ytd-comment-replies-renderer.style-scope.dot
 
 !--- Add to Playlist
 youtube.com##ytd-button-renderer.size-default.style-default.force-icon-button.ytd-menu-renderer.style-scope:nth-of-type(2)
@@ -97,11 +111,18 @@ youtube.com##.ytp-promotooltip-wrapper
 
 youtube.com##.ytp-promotooltip-container
 
-!--- Share Button
-youtube.com##ytd-button-renderer.size-default.style-default.force-icon-button.ytd-menu-renderer.style-scope:nth-of-type(1)
+! Share Button
+youtube.com##ytd-button-renderer:has([aria-label="Share"])
 
-!--- Subscribe Button
-youtube.com##.ytd-button-renderer.style-scope.yt-simple-endpoint > .size-default.style-destructive.ytd-button-renderer.style-scope
+! Subscribe Button
+youtube.com##ytd-button-renderer:has([aria-label="Subscribe"])
+
+! Join Button
+youtube.com##ytd-button-renderer:has([aria-label="Join"])
+
+! Save Button
+youtube.com###flexible-item-buttons > .ytd-menu-renderer.style-scope > yt-button-shape > .yt-spec-button-shape-next--icon-leading.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal.yt-spec-button-shape-next
+youtube.com##ytd-button-renderer:has([aria-label="Save"])
 
 !--- Mobile Youtube
 m.youtube.com###player-control-overlay > div.player-controls-content > div.player-controls-middle.center:nth-child(2) > button.icon-button:last-child
@@ -212,8 +233,6 @@ youtube.com##+js(json-prune, [].playerResponse.auxiliaryUi.messageRenderers.upse
 
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
 
-youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial
-
 m.youtube.com###dismissable:has-text(Buy or Rent)
 
 youtube.com###dismissable:has-text(Buy or Rent)
@@ -229,6 +248,19 @@ youtube.com##ytd-compact-link-renderer.yt-multi-page-menu-section-renderer.style
 youtube.com##ytd-compact-link-renderer.yt-multi-page-menu-section-renderer.style-scope:nth-of-type(5)
 
 youtube.com##ytd-compact-link-renderer.yt-multi-page-menu-section-renderer.style-scope:nth-of-type(6)
+
+youtube.com#@#+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial
+
+||www.gstatic.com/youtube/img/promos/growth/0676d94186ebbc002b8bd5858209e7354ee48a4f640c3750e475b8ef0525cc5c_244x112.png$image
+
+||www.gstatic.com/youtube/img/promos/growth/8aa0bd3a3a7f0d8e378c962bf1301d18d15040a04849e3b0673dd180a42d9c9f_244x112.webp$image
+
+! --------------
+
+! Remove Bad Youtube Channels
+youtube.com##ytd-rich-item-renderer:has(#byline-container:has-text(/Coachella|Jubilee|SSSniperWolf|James Charles|ChilledCow|ManiacButcherGr|Tik Tok It|Tik Tok|The Tik tok Compilation Channel|Cafe Music BGM channel|Miracle Music|Quiet Quest - Study Music|Right Side Broadcasting Network|Dhar Mann|Elizabeth Eaton -|TheYankeeMarshal|The Infographics Show|Relax Cafe Music|Marley Dockery|Aviation Pilots|Brady|The Dodo|SpongeBob SquarePants Official|AlotVines|Cocomelon - Nursery Rhymes|Lofi Girl|Milad Mirg|PawMeow|Cocomelon - Nursery Rhymes|Moonbug Kids - Cartoons and Kids Songs|Sawtooth Memes|Northflowo|DICTATOR|MOB Games|Deep Light|Binge Central|Buzzfeed/))
+
+! --------------
 
 !-	Reddit Filter ----------
 
@@ -334,6 +366,8 @@ drive.google.com###\:5d > .a-S-x-j.a-s-tb-pa > .PEfnhb
 
 drive.google.com##.UMrnmb-v3pZbf.ndfHFb-c4YZDc-FNFY6c-Hn6s1b-bBybbf
 
+drive.google.com##.a-la-B-x
+
 !-- Google Docs
 
 docs.google.com##.companion-app-switcher-container
@@ -343,10 +377,6 @@ docs.google.com##.goog-flat-button.goog-inline-block.docs-explore-widget-button
 docs.google.com##.waffle-assistant-entry
 
 docs.google.com##.app-switcher-button-checked.companion-collapser-button.app-switcher-button
-
-docs.google.com##.goog-inline-block.docs-navigation-tab-button.outline-refresh.docs-material
-
-docs.google.com##.left-sidebar-container-animation.docs-ui-unprintable.left-sidebar-container
 
 !-- Gmail
 
@@ -397,6 +427,8 @@ google.com##.ml-searchbox-button-signed-out.ml-searchbox-button-right-side-butto
 google.com##.ml-fab-text-mode.ml-button-fab.ml-button-my-location-fab.ml-button.ml-fab-inner
 
 google.com##.ml-fab-outer
+
+cloud.google.com###google-hats-survey
 
 !-	DuckDuckGo Filter ----------
 
@@ -449,6 +481,22 @@ duckduckgo.com###content_homepage > .cw--c > .js-tag-home.no-js__hide.tag-home--
 duckduckgo.com##.js-site-wrapper.site-wrapper--home.site-wrapper > .js-onboarding-ed.onboarding-ed
 
 duckduckgo.com##.header--text_promo
+
+duckduckgo.com##.js-text-promo-link.header--text_promo--link.text_promo--link
+
+duckduckgo.com##.js-header-aside-item-social.social.header__label.header--aside__social.header--aside__item > .js-hl-button.header__clickable
+
+duckduckgo.com##.header__label.showcase.header--aside__item > .js-hl-button.header__clickable
+
+duckduckgo.com##.js-feedback-start.feedback-btn__send
+
+duckduckgo.com##.footer__column
+
+duckduckgo.com##.feedback-btn.btn
+
+duckduckgo.com##.js-feedback-prompt-generic.feedback-prompt__link
+
+duckduckgo.com##.wM0P2cAvEoW4lkY2RqGv.O9Ipab51rBntYb0pwOQn
 
 !-	Instagram Filter ----------
 
@@ -546,6 +594,8 @@ ixl.com##.smartscore-subheader
 
 ixl.com###ribbons
 
+ixl.com##.box-show-prizes-msg.yui-panel-container
+
 !-	Quizizz Filter ----------
 
 quizizz.com##.modal-mask
@@ -614,7 +664,7 @@ britannica.com##.marketing-content.marketing-RIGHT_RAIL_MODULE
 
 !-	Khan Academy Filter ----------
 
-ww.khanacademy.org##._104gogl7
+khanacademy.org##._104gogl7
 
 khanacademy.org##._pnujn8l
 
@@ -657,28 +707,48 @@ easybib.com##div.home-page:nth-of-type(4)
 !-	News Filter ----------
 
 foxnews.com##.collection-trending.collection
-
 foxnews.com##.collection-radar.collection-multi.collection
-
 foxnews.com##.commenting-nation-promo
-
 foxnews.com##.desktop.sidebar-primary.sidebar-article.sidebar
-
 foxnews.com##.more-on-this
-
 foxnews.com##[href="https://foxnews.com/apps-products"]foxnews.com###spcv_conversation
-
 foxnews.com##[href="https://www.foxnews.com/apps-products"]www.foxnews.com###spcv_conversation
+foxnews.com##.watch.button
+foxnews.com##.contain > .video-container
+foxnews.com##.contain > .info
+foxnews.com##strong
+foxnews.com###comments
+
+foxbusiness.com##.sticky-region
+||static.foxnews.com/static/orion/styles/img/fox-news/nation-promo/nation_promo_2020_American_Arenas.jpg$image
+foxbusiness.com##.commenting-nation-promo > [href^="https://nation.foxnews.com/"]
+foxbusiness.com###comments
+foxbusiness.com##[href="http://foxbusiness.com/"] > strong
+foxbusiness.com##p > strong
+foxbusiness.com##.video-ct.featured-video.featured
+foxbusiness.com##.watch.button
 
 news.google.com##.SbZred.Xw9d0
 
 politico.com##.is-masoned.shifty-content.predetermined.pos-beta.format-s.story-interrupt
 
 washingtonpost.com###slug_leaderboard
-
 washingtonpost.com##.flex-column.flex.hide-for-print.grid-item--cols-lg-4.mt-md-l.grid-item--cols-md-12.grid-item--cols-sm-12.grid-item
 
 nytimes.com##.css-16l7vy9
+
+nypost.com##.nypost-brightcove-player.nyp-brightcove-player
+nypost.com##.right-column.sidebar
+nypost.com##.widget-more-stories
+nypost.com##.outbrain-enabled.comments
+
+sfchronicle.com##.slideshow--aside.article--aside
+sfchronicle.com##.lock.bottomZone.zone
+sfchronicle.com##.article--comments
+sfchronicle.com##.articleFooter--social
+sfchronicle.com##.articleRibbon--wrapper
+sfchronicle.com###subscription > .hidden-xs
+sfchronicle.com##.gigya_menu.treg-is-gigya
 
 !-	Greenwich Schools Filter ----------
 
@@ -716,38 +786,26 @@ ct-greenwich.myfollett.com##tr:nth-of-type(6) > .labelCell
 
 ||ct-greenwich.myfollett.com/aspen/images/bg-students.jpg$image
 
+docs.google.com##.equatio-form-inject-button
+docs.google.com##dji-apps-actions
+docs.google.com##.quantumWizButtonPapericonbuttonLight.quantumWizButtonPapericonbuttonEl.quantumWizButtonEl
+
 !-	Schoology Filter ----------
 
 schoology.greenwich.k12.ct.us##._pendo-launcher-badge-bottom-right_._pendo-launcher-badge_
 
 schoology.greenwich.k12.ct.us##div.attachments-file:nth-of-type(1) > .attachments-file-name > .kami-link
 
-!schoology.greenwich.k12.ct.us###home-feed-container
-
 schoology.greenwich.k12.ct.us##.util-directions-top-one-point-two-ctpIT.util-width-one-point-eight-1jZzx.util-height-one-point-eight-XPs3y.util-justify-content-center-1x8at.util-font-size-one-26ZPL.util-directions-right-point-two-3vkbs._3RmDr._1tpub.fioA9.tAI8z.USYsM.les2-._2L4PN._2JX1Q
 
-!-	Pi-hole Admin Console Filter ----------
-
-pi.hole##li:nth-of-type(4) > [href="https://pi-hole.net/donate/"]
-
-pi.hole##div.text-center.row-centered.row:nth-of-type(1)
-
-pi.hole##.user-footer
-
-pi.hole##li:nth-of-type(14) > [href="https://pi-hole.net/donate/"]
-
-pi.hole##a[href^="queries.php"]:nth-of-type(2)
+schoology.greenwich.k12.ct.us##.warning.messages.grading-period-warning
 
 !-	Miscellaneous Filters ----------
 
 newsela.com##.styles__recommendedContent___22lV6
-
 newsela.com##div.styles__toolTip___KQI75.styles__iconContainer___2sqc2:nth-of-type(2) > span > .styles__tooltipCircleButton___3OTeO.styles__iconOnly___3UL3x.styles__secondary___38Qfo.styles__rounded___2MZEv.styles__button___2mIfC
-
 newsela.com##.header-module--announcement--23bPS
-
 newsela.com##.header-module--visible--B9Y2A.header-module--Black--1rDnB.header-module--announcement_container--2BGeF
-
 newsela.com##.styles__bannerContainer___3_ZsG
 
 dictionary.com##.e1su27ci0.css-kxkt50
@@ -764,28 +822,24 @@ answers.com###right
 
 connvoters.com##body > center > table > tbody > tr > td:nth-of-type(1)
 
+countyfusion7.kofiletech.us##.lhnHocChatBtnCont
+
 mrwalach.com##.credit
 
 ||dnsleaktest.com/assets/img/cute-box-image.png$image
-
 dnsleaktest.com##[src="/assets/img/cute-box-image.png"]
-
 dnsleaktest.com###results > div.grid_12.results:first-child > div.cute-box:nth-child(3)
-
 dnsleaktest.com###results > div.grid_12.results:first-child > div.cute-box:nth-child(3) > a > img
 
 twitter.com##.r-zg41ew.r-1777fci.r-18u37iz.css-1dbjc4n
 
 github.com##.js-vote-banner.js-notice.f6.text-bold.text-white.p-3.flex-justify-between.width-full.d-flex
-
 github.com##.border-bottom.hide-sm.hide-md.hide-lg.mt-5.pr-3.col-lg-3.col-md-3.col-12.team-left-column
-
 github.com##.flex-column.flex-auto.d-flex.mx-auto > .flex-auto
 
 flipgrid.com###giphyVideo
 
 icivics.org##.popup
-
 icivics.org##.popup_back
 
 act.org##.alert-dismissible.alert-success.alert
@@ -803,45 +857,30 @@ ipaddressguide.com##.text-center.col-md-3
 
 meetingsamer40.webex.com##.animation_top_to_bottom.firefoxTip.meet_popover.el-popover
 
-ixl.com##.box-show-prizes-msg.yui-panel-container
-
 nearpod.com##.bloqueMaskHellobar
 
 gpsearch.azurewebsites.net##.dWelcomeContent
 gpsearch.azurewebsites.net###dWelcome
 
+chocolatey.org##.gitter-open-chat-button
+chocolatey.org##.shadow.d-md-block.d-none.py-3.collapsed.btn-announcement-notifications.btn-collapsing-right-sidebar.btn-primary.btn
+
+checkology.org##.quick-start-tab
+
+urbandictionary.com##div.def-panel:nth-of-type(3)
+
+symbolab.com##.print-hide.sidebar-content
+
 !-	Other Filters ----------
 
-youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(SSSniperWolf))
+10.10.10.10##.login-donate
+10.10.10.10## [href="https://pi-hole.net/donate/"]
+10.10.10.10##.col-sm-6.col-xs-12
 
-youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(James Charles))
-
-m.youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(SSSniperWolf))
-
-m.youtube.com###dismissable[class*="video-renderer"]:has(.ytd-channel-name:has-text(James Charles))
-
-youtube.com###dismissable:has-text(/SSSniperWolf/)
-
-youtube.com###dismissable:has-text(/James Charles/)
-
-m.youtube.com###dismissable:has-text(/SSSniperWolf/)
-
-m.youtube.com###dismissable:has-text(/James Charles/)
-
-youtube.com###dismissable:has-text(/ChilledCow|ManiacButcherGr|Tik Tok It|Tik Tok|The Tik tok Compilation Channel/)
-
-youtube.com###dismissable:has-text(/Cafe Music BGM channel/)
-
-youtube.com###dismissable:has-text(/Miracle Music/)
-
-youtube.com###dismissable:has-text(/Quiet Quest - Study Music/)
-
-youtube.com###dismissable:has-text(/Right Side Broadcasting Network/)
-
-mail.google.com###\:1 > .nH > .S4.oy8Mbf.nH.BltHke > .vy.S2.UI.Nr > .aZ6.tf.Nu > .ae4 > div > .TB.cf > tbody > .TD > .TC
-
-meet.google.com###ow3 > .T4LgNb > .kFwPee > div > .crqnQb > .pHsCke > .Jrb8ue > .lvE3se > .xGFNFf.e0UWKb > .XrLeg.QU4Gid.kCyAyd.UQuaGc.uArJ5e > .Fxmcue.l4V7wb
-
-mail.google.com##.TC
+pi.hole##.login-donate
+pi.hole## [href="https://pi-hole.net/donate/"]
+pi.hole##.col-sm-6.col-xs-12
 
 !--------------------
+
+! -------------------------------------------------------------------------------
