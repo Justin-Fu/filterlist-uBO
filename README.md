@@ -1,11 +1,9 @@
-Go to my other filterlist instead:
+# Justin-Fu Filterlist
 
-https://github.com/jfu299/filterlist-uBO/blob/master/README.md
 
-https://raw.githubusercontent.com/jfu299/filterlist-uBO/master/filterlist-uBO
+By: Justin Fu
 
-https://raw.githubusercontent.com/jfu299/filterlist-uBO/master/filterlist-uBO-youtube-only
 
-https://raw.githubusercontent.com/jfu299/filterlist-uBO/master/filterlist-uBO-reddit-only
+https://github.com/Justin-Fu/filterlist-uBO/
 
-https://raw.githubusercontent.com/jfu299/filterlist-uBO/master/filterlist-uBO-instagram-only
+https://github.com/jfu299/filterlist-uBO/
