@@ -6,12 +6,54 @@
 
 ! By: Justin Fu
 
-! Updated: April 16, 2023
+! Updated: May 19, 2023
 
 !--------------------
 
+!- Punycode / IDN Homograph ----------
+
+||xn--$doc,frame,important
+
+!- Bad TLD ----------
+
+||zip^$all,important
+||mov^$all,important
+
+!--------------------
 
 !-	Youtube Filter ----------
+
+! Youtube Shorts
+||youtube.com/shorts$doc,frame,important
+
+! YT Homepage - Hide the Shorts section
+youtube.com##[is-shorts]
+
+! YT Menu - Hide the Shorts button
+youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+
+! YT Search - Hide Shorts
+youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-video-renderer)
+
+! YT Search and Channels - Hide the Shorts sections
+youtube.com##ytd-reel-shelf-renderer
+
+! YT Channels - Hide the Shorts tab
+youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:nth-of-type(3):has-text(Shorts)
+
+! YT Subscriptions - Hide Shorts - Grid View
+youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
+
+! YT Subscriptions - Hide Shorts - List View
+youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)
+
+! YT Sidebar - Hide Shorts
+youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
+
+!--------------------
+
+! YT Search - keep videos and channels
+youtube.com##ytd-search ytd-item-section-renderer>#contents>:not(ytd-video-renderer,ytd-channel-renderer),ytd-secondary-search-container-renderer
 
 ! Voice Search Button
 youtube.com###voice-search-button
@@ -21,7 +63,7 @@ youtube.com##.ytd-button-renderer.style-scope.yt-simple-endpoint > .size-small.s
 youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
 
 ! Autoplay Button
-www.youtube.com##button.ytp-button:nth-of-type(6)
+youtube.com##button.ytp-button:nth-of-type(6)
 
 !--- Sign in button
 youtube.com##.size-small.style-suggestive.ytd-masthead.style-scope > .ytd-button-renderer.style-scope.yt-simple-endpoint
@@ -103,6 +145,8 @@ youtube.com##.watch-sidebar-head
 
 m.youtube.com##.ytm-autonav-bar
 
+youtube.com##.ytm-autonav-bar
+
 ##.ytp-pause-overlay
 
 !--- Autoplay Popup
@@ -123,6 +167,9 @@ youtube.com##ytd-button-renderer:has([aria-label="Join"])
 ! Save Button
 youtube.com###flexible-item-buttons > .ytd-menu-renderer.style-scope > yt-button-shape > .yt-spec-button-shape-next--icon-leading.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal.yt-spec-button-shape-next
 youtube.com##ytd-button-renderer:has([aria-label="Save"])
+
+! Livestreams
+youtube.com##[page-subtype="home"] ytd-rich-item-renderer .badge-style-type-live-now-alternate:upward(ytd-rich-item-renderer)
 
 !--- Mobile Youtube
 m.youtube.com###player-control-overlay > div.player-controls-content > div.player-controls-middle.center:nth-child(2) > button.icon-button:last-child
@@ -147,30 +194,6 @@ m.youtube.com##ytm-comment-simplebox-renderer.section
 
 !----------
 
-m.youtube.com###dismissable:has-text(Free with Ads)
-
-m.youtube.com##ytd-primetime-promo-renderer
-
-m.youtube.com##ytd-rich-section-renderer:has-text(Recommended movies)
-
-m.youtube.com##ytd-rich-section-renderer:has-text(Latest YouTube posts)
-
-m.youtube.com##ytd-rich-section-renderer:has-text(What did you think of this video?)
-
-m.youtube.com##ytd-rich-section-renderer:has-text(Breaking news)
-
-m.youtube.com##ytd-rich-section-renderer:has-text(Get the latest information from the CDC about COVID-19)
-
-m.youtube.com##ytd-rich-section-renderer:has-text(Featured)
-
-m.youtube.com###channel-subscription-promo-in-feed
-
-m.youtube.com###clarify-box
-
-m.youtube.com##ytd-mini-guide-renderer.ytd-app.style-scope
-
-!----------
-
 youtube.com###dismissable:has-text(Free with Ads)
 
 youtube.com##ytd-primetime-promo-renderer
@@ -186,6 +209,10 @@ youtube.com##ytd-rich-section-renderer:has-text(Breaking news)
 youtube.com##ytd-rich-section-renderer:has-text(Get the latest information from the CDC about COVID-19)
 
 youtube.com##ytd-rich-section-renderer:has-text(Featured)
+
+youtube.com##ytd-rich-section-renderer:has-text(Trending)
+
+youtube.com##ytd-rich-section-renderer:has-text(Free Primetime movies)
 
 youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(2)
 
@@ -251,14 +278,14 @@ youtube.com##ytd-compact-link-renderer.yt-multi-page-menu-section-renderer.style
 
 youtube.com#@#+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial
 
-||www.gstatic.com/youtube/img/promos/growth/0676d94186ebbc002b8bd5858209e7354ee48a4f640c3750e475b8ef0525cc5c_244x112.png$image
+||gstatic.com/youtube/img/promos/growth/0676d94186ebbc002b8bd5858209e7354ee48a4f640c3750e475b8ef0525cc5c_244x112.png$image
 
-||www.gstatic.com/youtube/img/promos/growth/8aa0bd3a3a7f0d8e378c962bf1301d18d15040a04849e3b0673dd180a42d9c9f_244x112.webp$image
+||gstatic.com/youtube/img/promos/growth/8aa0bd3a3a7f0d8e378c962bf1301d18d15040a04849e3b0673dd180a42d9c9f_244x112.webp$image
 
 ! --------------
 
 ! Remove Bad Youtube Channels
-youtube.com##ytd-rich-item-renderer:has(#byline-container:has-text(/Coachella|Jubilee|SSSniperWolf|James Charles|ChilledCow|ManiacButcherGr|Tik Tok It|Tik Tok|The Tik tok Compilation Channel|Cafe Music BGM channel|Miracle Music|Quiet Quest - Study Music|Right Side Broadcasting Network|Dhar Mann|Elizabeth Eaton -|TheYankeeMarshal|The Infographics Show|Relax Cafe Music|Marley Dockery|Aviation Pilots|Brady|The Dodo|SpongeBob SquarePants Official|AlotVines|Cocomelon - Nursery Rhymes|Lofi Girl|Milad Mirg|PawMeow|Cocomelon - Nursery Rhymes|Moonbug Kids - Cartoons and Kids Songs|Sawtooth Memes|Northflowo|DICTATOR|MOB Games|Deep Light|Binge Central|Buzzfeed/))
+youtube.com##ytd-rich-item-renderer:has(#byline-container:has-text(/Coachella|Jubilee|SSSniperWolf|James Charles|ChilledCow|ManiacButcherGr|Tik Tok It|Tik Tok|The Tik tok Compilation Channel|Cafe Music BGM channel|Miracle Music|Quiet Quest - Study Music|Right Side Broadcasting Network|Dhar Mann|Elizabeth Eaton -|TheYankeeMarshal|The Infographics Show|Relax Cafe Music|Marley Dockery|Aviation Pilots|Brady|The Dodo|SpongeBob SquarePants Official|AlotVines|Cocomelon - Nursery Rhymes|Lofi Girl|Milad Mirg|PawMeow|Cocomelon - Nursery Rhymes|Moonbug Kids - Cartoons and Kids Songs|Sawtooth Memes|Northflowo|DICTATOR|MOB Games|Deep Light|Binge Central|Buzzfeed|Top 10s/))
 
 ! --------------
 
@@ -528,7 +555,7 @@ instagram.com##._40dde
 
 instagram.com##._c05qa
 
-instagram.com##a[href^="https://itunes.apple.com/app/instagram/id389801252?"][role="alert"]
+instagram.com##a[href^="itunes.apple.com/app/instagram/id389801252?"][role="alert"]
 
 instagram.com##a[href="/accounts/login/?next=%2F&source=mobile_nav"] + button
 
@@ -711,8 +738,8 @@ foxnews.com##.collection-radar.collection-multi.collection
 foxnews.com##.commenting-nation-promo
 foxnews.com##.desktop.sidebar-primary.sidebar-article.sidebar
 foxnews.com##.more-on-this
-foxnews.com##[href="https://foxnews.com/apps-products"]foxnews.com###spcv_conversation
-foxnews.com##[href="https://www.foxnews.com/apps-products"]www.foxnews.com###spcv_conversation
+foxnews.com##[href="foxnews.com/apps-products"]foxnews.com###spcv_conversation
+foxnews.com##[href="foxnews.com/apps-products"]foxnews.com###spcv_conversation
 foxnews.com##.watch.button
 foxnews.com##.contain > .video-container
 foxnews.com##.contain > .info
@@ -721,7 +748,7 @@ foxnews.com###comments
 
 foxbusiness.com##.sticky-region
 ||static.foxnews.com/static/orion/styles/img/fox-news/nation-promo/nation_promo_2020_American_Arenas.jpg$image
-foxbusiness.com##.commenting-nation-promo > [href^="https://nation.foxnews.com/"]
+foxbusiness.com##.commenting-nation-promo > [href^="nation.foxnews.com/"]
 foxbusiness.com###comments
 foxbusiness.com##[href="http://foxbusiness.com/"] > strong
 foxbusiness.com##p > strong
@@ -871,14 +898,16 @@ urbandictionary.com##div.def-panel:nth-of-type(3)
 
 symbolab.com##.print-hide.sidebar-content
 
+||adblockplus.org/contribution$doc,frame,important
+
 !-	Other Filters ----------
 
 10.10.10.10##.login-donate
-10.10.10.10## [href="https://pi-hole.net/donate/"]
+10.10.10.10##[href="pi-hole.net/donate/"]
 10.10.10.10##.col-sm-6.col-xs-12
 
 pi.hole##.login-donate
-pi.hole## [href="https://pi-hole.net/donate/"]
+pi.hole##[href="pi-hole.net/donate/"]
 pi.hole##.col-sm-6.col-xs-12
 
 !--------------------
