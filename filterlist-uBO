@@ -15,7 +15,8 @@
 
 !- Punycode / IDN Homograph ----------
 
-||xn--$doc,frame,important
+||xn--$all,important
+||xn--$document,frame,important
 
 !- Bad TLD ----------
 
@@ -27,9 +28,12 @@
 !-	Youtube Filter ----------
 
 ! Youtube Shorts
-||youtube.com/shorts$doc,frame,important
-||m.youtube.com/shorts^$document,important
+||youtube.com/shorts$document,frame,important
+
+! Youtube Shorts Mobile
+||m.youtube.com/shorts^$document,frame,important
 ||m.youtube.com/shorts*
+||m.youtube.com/shorts$document,frame,important
 
 ! YT Homepage - Hide the Shorts section
 youtube.com##[is-shorts]
@@ -903,7 +907,7 @@ urbandictionary.com##div.def-panel:nth-of-type(3)
 
 symbolab.com##.print-hide.sidebar-content
 
-||adblockplus.org/contribution$doc,frame,important
+||adblockplus.org/contribution$document,frame,important
 
 !-	Other Filters ----------
 
