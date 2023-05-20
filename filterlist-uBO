@@ -9,7 +9,7 @@
 
 ! By: Justin Fu
 
-! Updated: May 19, 2023
+! Updated: May 20, 2023
 
 !--------------------
 
@@ -28,6 +28,8 @@
 
 ! Youtube Shorts
 ||youtube.com/shorts$doc,frame,important
+||m.youtube.com/shorts^$document,important
+||m.youtube.com/shorts*
 
 ! YT Homepage - Hide the Shorts section
 youtube.com##[is-shorts]
