@@ -1,5 +1,4 @@
 ! Title: Justin-Fu Filterlist
-!      (Works best with uBlock Origin)
 
 !    https://github.com/Justin-Fu/filterlist-uBO
 !    https://raw.githubusercontent.com/Justin-Fu/filterlist-uBO/master/filterlist-uBO
@@ -28,12 +27,12 @@
 !-	Youtube Filter ----------
 
 ! Youtube Shorts
-||youtube.com/shorts$document,frame,important
+||youtube.com/shorts$all,important
+||youtube.com/shorts^$all,important
 
 ! Youtube Shorts Mobile
-||m.youtube.com/shorts^$document,frame,important
-||m.youtube.com/shorts*
-||m.youtube.com/shorts$document,frame,important
+||m.youtube.com/shorts^$all,important
+||m.youtube.com/shorts$all,important
 
 ! YT Homepage - Hide the Shorts section
 youtube.com##[is-shorts]
@@ -907,7 +906,13 @@ urbandictionary.com##div.def-panel:nth-of-type(3)
 
 symbolab.com##.print-hide.sidebar-content
 
-||adblockplus.org/contribution$document,frame,important
+||adblockplus.org/contribution$all,important
+
+||adblockplus.org/contribution^$all,important
+
+||ublock.org$all,important
+
+||ublock.org^$all,important
 
 !-	Other Filters ----------
 
@@ -920,5 +925,3 @@ pi.hole##[href="pi-hole.net/donate/"]
 pi.hole##.col-sm-6.col-xs-12
 
 !--------------------
-
-! -------------------------------------------------------------------------------
