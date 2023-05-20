@@ -3,7 +3,7 @@
 
 By: Justin Fu
 
-Updated: May 19, 2023
+Updated: May 20, 2023
 
 https://github.com/Justin-Fu/filterlist-uBO/
 
